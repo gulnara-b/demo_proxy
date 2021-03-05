@@ -47,7 +47,7 @@ public class MainFilterService {
             try {
             customerRequestModel = objectMapper.readValue(body, CustomerRequestModel.class);
         } catch (Exception ex) {
-            statsService.addInvalid(customer.get(), timestampFromJson);// TODO
+            statsService.addInvalid(customer.get(), timestampFromJson);
             return new AcceptResponse(false, ex.getMessage());
         }
         Set<ConstraintViolation<CustomerRequestModel>> fieldErrors = validator.validate(customerRequestModel);

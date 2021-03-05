@@ -23,7 +23,7 @@ public class ConvertersTest {
         final Instant parsedTime = Converters.truncateMinutes(time);
         final ZonedDateTime parsedDateTime = parsedTime.atZone(ZoneOffset.UTC);
 
-        assertThat(parsedDateTime).isNotEqualTo(dateTime);//there should be a delta
+        assertThat(parsedDateTime).isNotEqualTo(dateTime);
         assertThat(parsedDateTime.getYear()).isEqualTo(dateTime.getYear());
         assertThat(parsedDateTime.getMonthValue()).isEqualTo(dateTime.getMonthValue());
         assertThat(parsedDateTime.getDayOfMonth()).isEqualTo(dateTime.getDayOfMonth());

@@ -1,4 +1,4 @@
-# Proxy ....
+# Little proxy
 
 This app accepts, verifies and proxies calls
 

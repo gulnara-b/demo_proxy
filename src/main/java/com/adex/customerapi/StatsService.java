@@ -1,7 +1,5 @@
 package com.adex.customerapi;
 
-
-import com.adex.customerapi.data.CustomerRepository;
 import com.adex.customerapi.data.HourlyStatsRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,7 +12,6 @@ import java.util.Optional;
 public class StatsService {
 
     private final HourlyStatsRepository hourlyStatsRepository;
-    private final CustomerRepository customerRepository;
 
     public HourlyStats addValid(Customer customer, Instant clientTime) {
         return realAdd(customer, clientTime, true);
